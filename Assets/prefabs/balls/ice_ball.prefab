@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 77389982945499542}
   - component: {fileID: 2725459420456699290}
   - component: {fileID: 4609912433090727200}
+  - component: {fileID: 2876046410278895028}
   m_Layer: 0
   m_Name: ice_ball
   m_TagString: Untagged
@@ -104,8 +105,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 6fe52326ef2e3469abafb885f7c898c4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -128,3 +129,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec2d8ebdecfb4f9c8dcaf131a3c29cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  glowingParticles: {fileID: 0}
+  speed: 3
+  rotationSpeed: 100
+  chargeTime: 1
+  attackTime: 3
+  timesShot: -1
+--- !u!58 &2876046410278895028
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2471277499110726241}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 4.5749993
