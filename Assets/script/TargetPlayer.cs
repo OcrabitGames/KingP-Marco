@@ -5,7 +5,7 @@ using UnityEngine;
 public class TargetPlayer : MonoBehaviour
 {
     public Transform target;
-    Scoreboard scoreboard_script;
+    private Scoreboard _scoreboardScript;
     public ParticleSystem glowingParticles;
     
     // Attributes
@@ -21,19 +21,19 @@ public class TargetPlayer : MonoBehaviour
     private Vector3 movement;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         rb_ball = gameObject.GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
-        scoreboard_script = target.GetComponent<Scoreboard>();
+        _scoreboardScript = target.GetComponent<Scoreboard>();
         glowingParticles = GetComponentInChildren<ParticleSystem>();
         BallAttack();
     }
     
     // Launch at ball
-    void BallAttack()
+    private void BallAttack()
     {
-        if (target)
+        if (target && !_scoreboardScript.gameOver)
         {
             if (attack_on)
             {
@@ -61,29 +61,33 @@ public class TargetPlayer : MonoBehaviour
             // Add score to player at the end of each shot
             if (timesShot > 0)
             {
-                scoreboard_script.score += 1;
-                scoreboard_script.UpdateScoreText();
+                _scoreboardScript.score += 1;
+                _scoreboardScript.UpdateScoreText();
             }
         }
     }
     
     // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         // Rotate ball if it is attacking || Dumb Ik
-        if (attack_on)
+        if (!_scoreboardScript.gameOver && attack_on)
         {
             rb_ball.MoveRotation(rb_ball.rotation + rotationSpeed * Time.fixedDeltaTime);
         }
     }
     
     // Log Collisions because why not
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log($"Collided with {collision.gameObject.name}");
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            _scoreboardScript.EndGame();
+        }
     }
 
-    IEnumerator ChargeSequence()
+    private IEnumerator ChargeSequence()
     {
         // Freeze Rotation
         rb_ball.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -102,7 +106,7 @@ public class TargetPlayer : MonoBehaviour
         BallAttack();
     }
 
-    IEnumerator AttackSequence()
+    private IEnumerator AttackSequence()
     {
         // Wait for AttackTime
         yield return new WaitForSeconds(attackTime);
