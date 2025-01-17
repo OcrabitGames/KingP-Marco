@@ -3,8 +3,8 @@ using UnityEngine.UIElements;
 
 public class spawn_balls : MonoBehaviour
 {
-    public int round = 0;
-    public float round_timer = 30f;
+    public float roundTimer = 30f;
+    private float _timeLeft;
     
     public GameObject[] ball_prefabs;
     public Transform[] spawn_points;
@@ -12,18 +12,18 @@ public class spawn_balls : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        _timeLeft = roundTimer;
     }
 
     // Update is called once per frame
     void Update()
     {
-        round_timer -= Time.deltaTime;
-        if (round_timer <= 0)
+        
+        _timeLeft -= Time.deltaTime;
+        if (_timeLeft <= 0)
         {
-            round += 1;
             SpawnBall();
-            round_timer = 30f;
+            _timeLeft = roundTimer;
         }
     }
 

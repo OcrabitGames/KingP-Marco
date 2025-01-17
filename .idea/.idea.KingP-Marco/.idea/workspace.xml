@@ -7,18 +7,10 @@
     <list default="true" id="94d96a65-f299-44cd-9118-8d88de9939dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KingP-Marco/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KingP-Marco/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/balls/columbia_ball 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/balls/columbia_ball 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/balls/ice_ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/balls/ice_ball.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/balls/japan_ball 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/balls/japan_ball 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/balls/tech2_ball 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/balls/tech2_ball 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/balls/tech3_ball 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/balls/tech3_ball 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/script/PinMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/PinMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/script/TargetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/TargetPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/PixelatedEleganceRegular-ovyAA SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/PixelatedEleganceRegular-ovyAA SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/script/Scoreboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/Scoreboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/script/spawn_balls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/spawn_balls.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +106,8 @@
       <workItem from="1736919178499" duration="3618000" />
       <workItem from="1736968687466" duration="1653000" />
       <workItem from="1736974883816" duration="976000" />
-      <workItem from="1736975900112" duration="80000" />
+      <workItem from="1736975900112" duration="679000" />
+      <workItem from="1737141127385" duration="510000" />
     </task>
     <servers />
   </component>
