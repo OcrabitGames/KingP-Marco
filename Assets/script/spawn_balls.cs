@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,11 +11,18 @@ public class spawn_balls : MonoBehaviour
     
     public GameObject[] ball_prefabs;
     public Transform[] spawn_points;
+    public List<GameObject> balls = new List<GameObject>();
+    
+    
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _timeLeft = roundTimer;
+        int randPoint = Random.Range(0, spawn_points.Length);
+        int randBall = Random.Range(0, ball_prefabs.Length);
+        GameObject newBall = Instantiate(ball_prefabs[randBall], spawn_points[randPoint].position, spawn_points[randPoint].rotation);
+        balls.Add(newBall);
     }
 
     // Update is called once per frame
@@ -27,10 +37,20 @@ public class spawn_balls : MonoBehaviour
         }
     }
 
-    void SpawnBall()
+    public void SpawnBall()
     {
-        int rand_point = Random.Range(0, spawn_points.Length);
-        int rand_ball = Random.Range(0, ball_prefabs.Length);
-        Instantiate(ball_prefabs[rand_ball], spawn_points[rand_point].position, spawn_points[rand_point].rotation);
+        int randPoint = Random.Range(0, spawn_points.Length);
+        int randBall = Random.Range(0, ball_prefabs.Length);
+        GameObject newBall = Instantiate(ball_prefabs[randBall], spawn_points[randPoint].position, spawn_points[randPoint].rotation);
+        balls.Add(newBall);
+    }
+
+    public void ClearBalls()
+    {
+        for (int i = 0; i < balls.Count; i++)
+        {
+            Destroy(balls[i]);
+        }
+        balls.Clear();
     }
 }

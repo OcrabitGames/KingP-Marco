@@ -2145,6 +2145,7 @@ MonoBehaviour:
   timePassed: 0
   gameOver: 0
   gameOverScreen: {fileID: 1974962468}
+  summonerObject: {fileID: 1267534280}
 --- !u!70 &1204263043
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2395,6 +2396,7 @@ MonoBehaviour:
   - {fileID: 2052258127}
   - {fileID: 1818837353}
   - {fileID: 1642011286}
+  balls: []
 --- !u!4 &1267534282
 Transform:
   m_ObjectHideFlags: 0

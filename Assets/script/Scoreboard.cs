@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.Serialization;
 
 public class Scoreboard : MonoBehaviour
 {
@@ -9,11 +10,14 @@ public class Scoreboard : MonoBehaviour
     public float timePassed;
     
     public bool gameOver = false;
-    public GameObject gameOverScreen;
+    public GameObject gameOverScreen; 
+    public GameObject summonerObject;
+    private spawn_balls spawnBallScript;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        spawnBallScript = summonerObject.GetComponent<spawn_balls>();
         timePassed = 0f;
         scoreText.text = "Score: " + score.ToString();
     }
@@ -44,5 +48,7 @@ public class Scoreboard : MonoBehaviour
         gameOverScreen.SetActive(false);
         score = 0;
         timePassed = 0f;
+        spawnBallScript.ClearBalls();
+        spawnBallScript.SpawnBall();
     }
 }
