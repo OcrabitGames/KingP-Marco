@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PinMovement : MonoBehaviour
@@ -13,6 +14,10 @@ public class PinMovement : MonoBehaviour
     public float dashDuration = 0.2f;
     private float _dashDuration;
     public float dashSpeed = 20f;
+    
+    // Dash UI
+    public GameObject dashCooldownOverlay;
+    public TextMeshProUGUI dashCooldownText;
     
     private Rigidbody2D _rb;
     private Scoreboard _scoreboard;
@@ -50,13 +55,26 @@ public class PinMovement : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
         
         // Do Regular Movement
-        if (_dashCooldown > 0) _dashCooldown -= Time.fixedDeltaTime;
+        if (_dashCooldown > 0)
+        {
+            _dashCooldown -= Time.fixedDeltaTime;
+            dashCooldownText.text = _dashCooldown.ToString("F0");
+        } else {
+            dashCooldownOverlay.SetActive(false);
+        }
+        
         _rb.MovePosition(transform.position + movement * (speed * Time.fixedDeltaTime));
         
         // Implement Dash Feature
         var dashKey = Input.GetKey(KeyCode.Y);
         if (dashKey && !isDashing && _dashCooldown <= 0f) {
+            // Start Dash
             isDashing = true;
+            
+            // Activate Cooldown UI
+            dashCooldownOverlay.SetActive(true);
+            
+            // Initialize direction and cooldown
             _dashDuration = dashDuration;
             _dashDirection = movement.normalized;
             _dashCooldown = dashCooldown + dashDuration;
@@ -66,7 +84,10 @@ public class PinMovement : MonoBehaviour
                 _dashDuration -= Time.deltaTime;
                 _rb.MovePosition(transform.position + _dashDirection * (dashSpeed * Time.fixedDeltaTime));
             } else { 
+                // End Dash
                 isDashing = false; // Reset Dash Motion and Duration
+                
+                // Reset direction and cooldown
                 _dashDuration = dashDuration; 
                 _dashDirection = Vector3.zero;
             }
