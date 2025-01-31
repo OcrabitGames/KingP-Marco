@@ -14,7 +14,19 @@ PrefabInstance:
       objectReference: {fileID: -8487396936026994761, guid: 5d4e1b4ba48414fa5ab738838bacd0dc, type: 3}
     - target: {fileID: 2471277499110726241, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
       propertyPath: m_Name
-      value: japan_ball 1
+      value: japan_ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Radius
+      value: 3.8645353
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.20546436
       objectReference: {fileID: 0}
     - target: {fileID: 4656150775431996969, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
       propertyPath: m_LocalPosition.x

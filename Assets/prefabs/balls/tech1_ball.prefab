@@ -16,6 +16,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: tech1_ball
       objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Radius
+      value: 3.2086973
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.013697544
+      objectReference: {fileID: 0}
     - target: {fileID: 4656150775431996969, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

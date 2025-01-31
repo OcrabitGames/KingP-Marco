@@ -14,7 +14,19 @@ PrefabInstance:
       objectReference: {fileID: -3079722678121271134, guid: a00025afeee9141bc99e40e9b9271e8b, type: 3}
     - target: {fileID: 2471277499110726241, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
       propertyPath: m_Name
-      value: tech3_ball 1
+      value: tech3_ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Radius
+      value: 3.7499998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4656150775431996969, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
       propertyPath: m_LocalPosition.x

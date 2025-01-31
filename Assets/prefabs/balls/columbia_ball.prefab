@@ -14,7 +14,19 @@ PrefabInstance:
       objectReference: {fileID: 8050257667232559749, guid: 075a41bd1a12642f0b30f9e855ac798a, type: 3}
     - target: {fileID: 2471277499110726241, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
       propertyPath: m_Name
-      value: columbia_ball 1
+      value: columbia_ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Radius
+      value: 3.8076265
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.042373337
       objectReference: {fileID: 0}
     - target: {fileID: 4656150775431996969, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
       propertyPath: m_LocalPosition.x

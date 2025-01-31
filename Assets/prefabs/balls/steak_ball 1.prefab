@@ -11,10 +11,22 @@ PrefabInstance:
     - target: {fileID: 77389982945499542, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6988862149216312699, guid: c9277700f9c97401c966237b9d9a6b68, type: 3}
+      objectReference: {fileID: 2612753881109755140, guid: c9277700f9c97401c966237b9d9a6b68, type: 3}
     - target: {fileID: 2471277499110726241, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
       propertyPath: m_Name
       value: steak_ball 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Radius
+      value: 4.3199997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876046410278895028, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4656150775431996969, guid: 9798f2cbfbb2f493596ce227288c2070, type: 3}
       propertyPath: m_LocalPosition.x
