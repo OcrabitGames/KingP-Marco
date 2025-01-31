@@ -47,8 +47,8 @@ public class Scoreboard : MonoBehaviour
         gameOver = false;
         gameOverScreen.SetActive(false);
         score = 0;
+        UpdateScoreText();
         timePassed = 0f;
-        spawnBallScript.ClearBalls();
-        spawnBallScript.SpawnBall();
+        spawnBallScript.ResetGame();
     }
 }

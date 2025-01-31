@@ -37,7 +37,7 @@ public class spawn_balls : MonoBehaviour
         }
     }
 
-    public void SpawnBall()
+    private void SpawnBall()
     {
         int randPoint = Random.Range(0, spawn_points.Length);
         int randBall = Random.Range(0, ball_prefabs.Length);
@@ -45,7 +45,7 @@ public class spawn_balls : MonoBehaviour
         balls.Add(newBall);
     }
 
-    public void ClearBalls()
+    private void ClearBalls()
     {
         for (int i = 0; i < balls.Count; i++)
         {
@@ -53,4 +53,15 @@ public class spawn_balls : MonoBehaviour
         }
         balls.Clear();
     }
+
+    public void ResetGame()
+    {
+        // Reset Ball spawn clock to round timer
+        _timeLeft = roundTimer;
+        
+        // Reset Ball States
+        ClearBalls();
+        SpawnBall();
+    }
+    
 }
