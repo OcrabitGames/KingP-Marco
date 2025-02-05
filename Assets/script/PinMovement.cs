@@ -22,7 +22,6 @@ public class PinMovement : MonoBehaviour
     private Rigidbody2D _rb;
     private Scoreboard _scoreboard;
     
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

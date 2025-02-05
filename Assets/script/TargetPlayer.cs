@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using NUnit.Framework.Constraints;
+using TMPro;
 using UnityEngine;
 
 public class TargetPlayer : MonoBehaviour
@@ -20,6 +22,13 @@ public class TargetPlayer : MonoBehaviour
     private bool attack_on = false;
     private Vector3 movement;
     
+    // Miss Mechanism
+    float prevDistance = Mathf.Infinity;
+    public float _ballDistance; 
+    private bool _justMissed = false;
+    private Collider2D targetCollider;
+    private Collider2D ballCollider;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
@@ -27,6 +36,11 @@ public class TargetPlayer : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").transform;
         _scoreboardScript = target.GetComponent<Scoreboard>();
         glowingParticles = GetComponentInChildren<ParticleSystem>();
+        
+        // Setup Colliders
+        targetCollider = target.GetComponent<Collider2D>();
+        
+        // Start Ball Sequence
         BallAttack();
     }
     
@@ -35,6 +49,9 @@ public class TargetPlayer : MonoBehaviour
     {
         if (target && !_scoreboardScript.gameOver)
         {
+            // Set miss value
+            _justMissed = false;
+            
             if (attack_on)
             {
                 // Do the calculations for the trajectory and movement
@@ -68,6 +85,22 @@ public class TargetPlayer : MonoBehaviour
     }
     
     // Update is called once per frame
+    private void Update()
+    {
+        if (targetCollider)
+        {
+            Vector3 closestPoint = targetCollider.ClosestPoint(transform.position);
+            _ballDistance = Vector3.Distance(transform.position, closestPoint);
+            
+            if (!_justMissed && _ballDistance > prevDistance && prevDistance < 1f)
+            {
+                _justMissed = true;
+                _scoreboardScript.UpdateNearMissText();
+            }
+            prevDistance = _ballDistance;
+        }
+    }
+    
     private void FixedUpdate()
     {
         // Rotate ball if it is attacking || Dumb Ik

@@ -5,8 +5,11 @@ using UnityEngine.Serialization;
 public class Scoreboard : MonoBehaviour
 {
     public int score = 0;
+    public int nearMisses = 0;
     public TMP_Text scoreText;
     public TMP_Text clockText;
+    public TMP_Text highscoreText; // Implement This Later
+    public TMP_Text nearMissText;
     public float timePassed;
     
     public bool gameOver = false;
@@ -36,6 +39,12 @@ public class Scoreboard : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
     }
 
+    public void UpdateNearMissText()
+    {
+        nearMisses++;
+        nearMissText.text = $"Near Misses: {nearMisses}";
+    }
+
     public void EndGame()
     {
         gameOver = true;
@@ -44,11 +53,20 @@ public class Scoreboard : MonoBehaviour
 
     public void RestartGame()
     {
+        // Start Restart
         gameOver = false;
         gameOverScreen.SetActive(false);
+        
+        // Reset Score Values
         score = 0;
         UpdateScoreText();
+        nearMisses = -1;
+        UpdateNearMissText();
+        
+        // Reset Time
         timePassed = 0f;
+        
+        // Reset Game Objects
         spawnBallScript.ResetGame();
     }
 }
