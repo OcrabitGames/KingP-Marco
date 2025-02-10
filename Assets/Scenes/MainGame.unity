@@ -2126,7 +2126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d2fdb74d07504f01b2426091bb8a568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   rotationVelocity: 5
   dashCooldown: 3
   _dashCooldown: 0
@@ -2135,6 +2135,7 @@ MonoBehaviour:
   dashSpeed: 20
   dashCooldownOverlay: {fileID: 2119785565}
   dashCooldownText: {fileID: 1491446749}
+  cam: {fileID: 519420031}
 --- !u!50 &1204263038
 Rigidbody2D:
   serializedVersion: 5
@@ -2161,7 +2162,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &1204263039
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2254,6 +2255,7 @@ MonoBehaviour:
   gameOver: 0
   gameOverScreen: {fileID: 1974962468}
   summonerObject: {fileID: 1267534280}
+  pinMovementScript: {fileID: 0}
 --- !u!60 &1204263043
 PolygonCollider2D:
   m_ObjectHideFlags: 0

@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="94d96a65-f299-44cd-9118-8d88de9939dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KingP-Marco/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KingP-Marco/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/script/PinMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/PinMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/script/Scoreboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/Scoreboard.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/script/TargetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/TargetPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +119,9 @@
       <workItem from="1738184989013" duration="5504000" />
       <workItem from="1738609885164" duration="3100000" />
       <workItem from="1738784354253" duration="266000" />
+      <workItem from="1738790627577" duration="3531000" />
+      <workItem from="1739222539159" duration="525000" />
+      <workItem from="1739223606131" duration="243000" />
     </task>
     <servers />
   </component>

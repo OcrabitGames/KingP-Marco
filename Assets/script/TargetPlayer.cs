@@ -12,10 +12,13 @@ public class TargetPlayer : MonoBehaviour
     
     // Attributes
     public float speed = 5f;
+    public float minSpeed = 5f;
+    public float maxSpeed = 15f;
     public float rotationSpeed = 100f;
     public float chargeTime = 1f;
     public float attackTime = 3f;
     public int timesShot = -1;
+    public float secondsToMaxSpeed = 300;
     
     private Rigidbody2D rb_ball;
 
@@ -109,6 +112,12 @@ public class TargetPlayer : MonoBehaviour
             rb_ball.MoveRotation(rb_ball.rotation + rotationSpeed * Time.fixedDeltaTime);
         }
     }
+
+    private void SetDifficultySpeed()
+    {
+        speed = Mathf.Clamp(_scoreboardScript.timePassed / secondsToMaxSpeed, minSpeed, maxSpeed);
+        Debug.Log($"Speed set to: {speed}");
+    }
     
     // Log Collisions because why not
     private void OnCollisionEnter2D(Collision2D collision)
@@ -124,13 +133,16 @@ public class TargetPlayer : MonoBehaviour
     {
         // Freeze Rotation
         rb_ball.constraints = RigidbodyConstraints2D.FreezeRotation;
-        
+
         // Wait for ChargeTime
         yield return new WaitForSeconds(chargeTime);
+        
+        // Set new Speed
+        SetDifficultySpeed();
 
         // Set the attack to happen
         attack_on = true;
-        
+
         // Unfreeze Rotation
         rb_ball.constraints = RigidbodyConstraints2D.None;
 
