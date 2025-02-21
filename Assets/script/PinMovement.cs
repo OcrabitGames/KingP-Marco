@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PinMovement : MonoBehaviour
 {
@@ -17,16 +18,19 @@ public class PinMovement : MonoBehaviour
     
     // Dash UI
     public GameObject dashCooldownOverlay;
+    //Image dashCooldownImage;
     public TextMeshProUGUI dashCooldownText;
     
     private Rigidbody2D _rb;
     private Scoreboard _scoreboard;
+    public Camera cam;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _scoreboard = GetComponent<Scoreboard>();
+        //dashCooldownImage = dashCooldownOverlay.GetComponent<Image>();
         
         // Set values
         _dashCooldown = dashCooldown;
@@ -49,15 +53,23 @@ public class PinMovement : MonoBehaviour
         var rotateRight = Input.GetKey(KeyCode.I);
 
         // Movement Keys
-        var moveHorizontal = Input.GetAxis("Horizontal");
-        var moveVertical = Input.GetAxis("Vertical");
-        Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
+        // var moveHorizontal = Input.GetAxis("Horizontal");
+        // var moveVertical = Input.GetAxis("Vertical");
+        // Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
+        
+        Vector3 mousePosG = cam.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 movement = (new Vector3(mousePosG.x, mousePosG.y, 0) - transform.position).normalized;
+        if (movement.sqrMagnitude < 0.1f)
+        {
+            movement = Vector2.zero;
+        }
         
         // Do Regular Movement
         if (_dashCooldown > 0)
         {
             _dashCooldown -= Time.fixedDeltaTime;
             dashCooldownText.text = _dashCooldown.ToString("F0");
+            //dashCooldownImage.fillAmount = 0.4f; Doesn't work
         } else {
             dashCooldownOverlay.SetActive(false);
         }
@@ -102,5 +114,16 @@ public class PinMovement : MonoBehaviour
             _rb.angularVelocity = _rb.angularVelocity - rotationVelocity;
             //_rb.MoveRotation(_rb.rotation + -rotationSpeed*Time.fixedDeltaTime);
         }
+    }
+
+    public void unfreeze_rotation()
+    {
+        _rb.freezeRotation = false;
+    }
+    
+    public void freeze_reset_rotation()
+    {
+        _rb.rotation = 0f;
+        _rb.freezeRotation = true;
     }
 }
