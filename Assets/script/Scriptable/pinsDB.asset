@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49bac83d3e6ba428d9ff2973cde96e75, type: 3}
+  m_Name: pinsDB
+  m_EditorClassIdentifier: 
+  pins:
+  - name: bill
+    prefab: {fileID: 2222258841341901063, guid: fc9d7de7033584c83b1f912a43fe614e, type: 3}
+  - name: cardinal
+    prefab: {fileID: 7548043907069018703, guid: 0a33d3db077ca4360bf902362fffca01, type: 3}
+  - name: chef
+    prefab: {fileID: 8383326472371977081, guid: f0cd054cc7da44cbc9de2e95eec85438, type: 3}
+  - name: choco
+    prefab: {fileID: 4390346319661228177, guid: cd58246fc7b784bf78ccb48663f633fa, type: 3}
+  - name: cyber
+    prefab: {fileID: 6577634666130024609, guid: 779fc5afed4ae463a8bdbfd25d209f3d, type: 3}
+  - name: dog
+    prefab: {fileID: 3402219034703802566, guid: e963f2c2ed4d9484583129d0f63d8f84, type: 3}
+  - name: frog
+    prefab: {fileID: 5366469529345051147, guid: b00981cb961ea49518fb3c42c08425a5, type: 3}
+  - name: normal
+    prefab: {fileID: 6125663089768580023, guid: 7a7529d31e74a4607a87d2f31f72ff1a, type: 3}

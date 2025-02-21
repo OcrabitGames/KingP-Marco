@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 7732545603726411990}
   - component: {fileID: 7556659118363195699}
   - component: {fileID: 8734504360538132925}
+  - component: {fileID: -3752305185519907599}
+  - component: {fileID: 1711814098275268782}
+  - component: {fileID: 3782045678371368140}
   m_Layer: 0
   m_Name: dog_pin
   m_TagString: Untagged
@@ -257,3 +260,74 @@ PolygonCollider2D:
       - {x: 0.71, y: -4.36}
       - {x: 0.82, y: -4.31}
   m_UseDelaunayMesh: 0
+--- !u!50 &-3752305185519907599
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3402219034703802566}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &1711814098275268782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3402219034703802566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d2fdb74d07504f01b2426091bb8a568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  rotationVelocity: 5
+  dashCooldown: 3
+  _dashCooldown: 0
+  isDashing: 0
+  dashDuration: 0.5
+  dashSpeed: 20
+  dashCooldownOverlay: {fileID: 0}
+  dashCooldownText: {fileID: 0}
+  cam: {fileID: 0}
+--- !u!114 &3782045678371368140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3402219034703802566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d160853f34b9a465aa16e988fef6d1e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  nearMisses: 0
+  scoreText: {fileID: 0}
+  clockText: {fileID: 0}
+  highscoreText: {fileID: 0}
+  nearMissText: {fileID: 0}
+  timePassed: 0
+  gameOver: 0
+  gameOverScreen: {fileID: 0}
+  summonerObject: {fileID: 0}
