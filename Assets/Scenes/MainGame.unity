@@ -1509,7 +1509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 86, y: 38}
+  m_AnchoredPosition: {x: 95, y: 38}
   m_SizeDelta: {x: 143, y: 76.69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &862513375
@@ -2113,7 +2113,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1204263037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2135,7 +2135,6 @@ MonoBehaviour:
   dashSpeed: 20
   dashCooldownOverlay: {fileID: 2119785565}
   dashCooldownText: {fileID: 1491446749}
-  cam: {fileID: 519420031}
 --- !u!50 &1204263038
 Rigidbody2D:
   serializedVersion: 5
@@ -2247,15 +2246,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   nearMisses: 0
-  scoreText: {fileID: 1719641635}
-  clockText: {fileID: 574776597}
-  highscoreText: {fileID: 0}
+  scoreText: {fileID: 0}
+  clockText: {fileID: 0}
   nearMissText: {fileID: 364278614}
   timePassed: 0
   gameOver: 0
-  gameOverScreen: {fileID: 1974962468}
-  summonerObject: {fileID: 1267534280}
-  pinMovementScript: {fileID: 0}
+  gameOverScreen: {fileID: 0}
 --- !u!60 &1204263043
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2593,6 +2589,8 @@ MonoBehaviour:
   - {fileID: 1818837353}
   - {fileID: 1642011286}
   balls: []
+  targetObject: {fileID: 0}
+  pinsDB: {fileID: 11400000, guid: b8e8d402e026045069b25373f9e86347, type: 2}
 --- !u!4 &1267534282
 Transform:
   m_ObjectHideFlags: 0
@@ -4177,7 +4175,7 @@ GameObject:
   - component: {fileID: 1974962470}
   m_Layer: 5
   m_Name: DeathPanel
-  m_TagString: Untagged
+  m_TagString: DeathPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -23,11 +23,15 @@ public class PinMovement : MonoBehaviour
     
     private Rigidbody2D _rb;
     private Scoreboard _scoreboard;
-    public Camera cam;
+    private Camera cam;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        cam = Camera.main;
+        dashCooldownText = GameObject.Find("Canvas/Dash/DashOff/counter").GetComponent<TextMeshProUGUI>(); 
+        dashCooldownOverlay = GameObject.Find("Canvas/Dash/DashOff");
+        
         _rb = GetComponent<Rigidbody2D>();
         _scoreboard = GetComponent<Scoreboard>();
         //dashCooldownImage = dashCooldownOverlay.GetComponent<Image>();

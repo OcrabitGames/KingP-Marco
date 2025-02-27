@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3782045678371368140}
   m_Layer: 0
   m_Name: dog_pin
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,7 +308,6 @@ MonoBehaviour:
   dashSpeed: 20
   dashCooldownOverlay: {fileID: 0}
   dashCooldownText: {fileID: 0}
-  cam: {fileID: 0}
 --- !u!114 &3782045678371368140
 MonoBehaviour:
   m_ObjectHideFlags: 0

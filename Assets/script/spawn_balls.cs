@@ -1,8 +1,5 @@
 using System.Collections.Generic;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class spawn_balls : MonoBehaviour
 {
@@ -13,11 +10,15 @@ public class spawn_balls : MonoBehaviour
     public Transform[] spawn_points;
     public List<GameObject> balls = new List<GameObject>();
     
+    public GameObject targetObject;
+    public Pins pinsDB;
+    
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        SpawnPin();
         _timeLeft = roundTimer;
         int randPoint = Random.Range(0, spawn_points.Length);
         int randBall = Random.Range(0, ball_prefabs.Length);
@@ -62,6 +63,11 @@ public class spawn_balls : MonoBehaviour
         // Reset Ball States
         ClearBalls();
         SpawnBall();
+    }
+    
+    void SpawnPin() {
+        Debug.Log("sel" +CharacterManager.selection);
+        targetObject = Instantiate(pinsDB.GetPin(CharacterManager.selection).prefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity);
     }
     
 }

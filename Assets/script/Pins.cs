@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Pins", menuName = "Scriptable Objects/Pins")]
 public class Pins : ScriptableObject
 {
+    public static int selection;
     public Pin[] pins;
 
     public int GetCount()

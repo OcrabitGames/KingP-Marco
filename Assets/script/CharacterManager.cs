@@ -4,7 +4,7 @@ using UnityEngine;
 public class CharacterManager : MonoBehaviour
 {
     public Pins pinsDB;
-    public int selection = 0;
+    public static int selection = 0;
     public SpriteRenderer spriteRenderer;
     public TMP_Text nameLabel;
 
@@ -12,6 +12,7 @@ public class CharacterManager : MonoBehaviour
     {
         UpdateCharacter();
     }
+    
     void UpdateCharacter()
     {
         var current = pinsDB.GetPin(selection);

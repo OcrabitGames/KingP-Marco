@@ -9,20 +9,32 @@ public class Scoreboard : MonoBehaviour
     public int nearMisses = 0;
     public TMP_Text scoreText;
     public TMP_Text clockText;
-    public TMP_Text highscoreText; // Implement This Later
     public TMP_Text nearMissText;
     public float timePassed;
     
     public bool gameOver = false;
     public GameObject gameOverScreen; 
-    public GameObject summonerObject;
+    private GameObject summonerObject;
     private PinMovement pinMovementScript;
     private spawn_balls spawnBallScript;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        pinMovementScript = this.GameObject().GetComponent<PinMovement>();
+        scoreText = GameObject.Find("Canvas/ScoreText").GetComponent<TMP_Text>(); 
+        clockText = GameObject.Find("Canvas/Time Panel/Timer").GetComponent<TMP_Text>();
+        nearMissText = GameObject.Find("Canvas/NearMiss").GetComponent<TMP_Text>();
+        
+        pinMovementScript = GetComponent<PinMovement>();
+        summonerObject = GameObject.Find("summoner");
+        
+        gameOverScreen = GameObject.FindGameObjectWithTag("DeathPanel");
+        if (gameOverScreen)
+        {
+            Debug.Log("Game Over Screen" + gameOverScreen);
+            gameOverScreen.SetActive(false);
+        }
+        
         spawnBallScript = summonerObject.GetComponent<spawn_balls>();
         timePassed = 0f;
         scoreText.text = "Score: " + score.ToString();
