@@ -306,6 +306,10 @@ MonoBehaviour:
   isDashing: 0
   dashDuration: 0.5
   dashSpeed: 20
+  invincibilityCooldown: 3
+  _invincibilityCooldown: 0
+  isInvincible: 0
+  invincibilityDuration: 1.5
   dashCooldownOverlay: {fileID: 0}
   dashCooldownText: {fileID: 0}
 --- !u!114 &3782045678371368140
@@ -324,9 +328,7 @@ MonoBehaviour:
   nearMisses: 0
   scoreText: {fileID: 0}
   clockText: {fileID: 0}
-  highscoreText: {fileID: 0}
   nearMissText: {fileID: 0}
   timePassed: 0
   gameOver: 0
   gameOverScreen: {fileID: 0}
-  summonerObject: {fileID: 0}

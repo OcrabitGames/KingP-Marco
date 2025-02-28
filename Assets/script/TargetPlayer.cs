@@ -8,7 +8,7 @@ public class TargetPlayer : MonoBehaviour
 {
     public Transform target;
     private Scoreboard _scoreboardScript;
-    public ParticleSystem glowingParticles;
+    private PinMovement _pinMovementScript;
     
     // Attributes
     public float speed = 5f;
@@ -38,7 +38,7 @@ public class TargetPlayer : MonoBehaviour
         rb_ball = gameObject.GetComponent<Rigidbody2D>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         _scoreboardScript = target.GetComponent<Scoreboard>();
-        glowingParticles = GetComponentInChildren<ParticleSystem>();
+        _pinMovementScript = target.GetComponent<PinMovement>();
         
         // Setup Colliders
         targetCollider = target.GetComponent<Collider2D>();
@@ -125,7 +125,10 @@ public class TargetPlayer : MonoBehaviour
         Debug.Log($"Collided with {collision.gameObject.name}");
         if (collision.gameObject.CompareTag("Player"))
         {
-            _scoreboardScript.EndGame();
+            if (!_pinMovementScript.CheckInvincibility())
+            {
+                _scoreboardScript.EndGame();
+            }
         }
     }
 

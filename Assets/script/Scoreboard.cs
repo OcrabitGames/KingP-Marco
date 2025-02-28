@@ -21,7 +21,7 @@ public class Scoreboard : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        scoreText = GameObject.Find("Canvas/ScoreText").GetComponent<TMP_Text>(); 
+        scoreText = GameObject.Find("Canvas/ScorePanel/ScoreText").GetComponent<TMP_Text>(); 
         clockText = GameObject.Find("Canvas/Time Panel/Timer").GetComponent<TMP_Text>();
         nearMissText = GameObject.Find("Canvas/NearMiss").GetComponent<TMP_Text>();
         

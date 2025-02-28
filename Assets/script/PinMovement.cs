@@ -16,10 +16,20 @@ public class PinMovement : MonoBehaviour
     private float _dashDuration;
     public float dashSpeed = 20f;
     
+    // Invincibility Stuff
+    public float invincibilityCooldown = 3f;
+    public float _invincibilityCooldown;
+    public bool isInvincible = false;
+    public float invincibilityDuration = 1.5f;
+    private float _invincibilityDuration;
+    
     // Dash UI
     public GameObject dashCooldownOverlay;
-    //Image dashCooldownImage;
     public TextMeshProUGUI dashCooldownText;
+    
+    // Invincibility UI
+    public GameObject invincibilityCooldownOverlay;
+    public TextMeshProUGUI invincibilityCooldownText;
     
     private Rigidbody2D _rb;
     private Scoreboard _scoreboard;
@@ -29,16 +39,23 @@ public class PinMovement : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        dashCooldownText = GameObject.Find("Canvas/Dash/DashOff/counter").GetComponent<TextMeshProUGUI>(); 
-        dashCooldownOverlay = GameObject.Find("Canvas/Dash/DashOff");
         
-        _rb = GetComponent<Rigidbody2D>();
-        _scoreboard = GetComponent<Scoreboard>();
-        //dashCooldownImage = dashCooldownOverlay.GetComponent<Image>();
+        // Dash
+        dashCooldownText = GameObject.Find("Canvas/Dash/DashOff/counter").GetComponent<TextMeshProUGUI>(); 
+        dashCooldownOverlay = GameObject.Find("Canvas/Dash/DashOff"); // Dash
+        
+        // Invincibility
+        invincibilityCooldownText = GameObject.Find("Canvas/Invincibility/InvincibilityOff/counter").GetComponent<TextMeshProUGUI>(); 
+        invincibilityCooldownOverlay = GameObject.Find("Canvas/Invincibility/InvincibilityOff");
         
         // Set values
         _dashCooldown = dashCooldown;
         _dashDuration = dashDuration;
+        _invincibilityCooldown = invincibilityCooldown;
+        _invincibilityDuration = invincibilityDuration;
+        
+        _rb = GetComponent<Rigidbody2D>();
+        _scoreboard = GetComponent<Scoreboard>();
     }
 
     // Update is called once per frame
@@ -68,17 +85,44 @@ public class PinMovement : MonoBehaviour
             movement = Vector2.zero;
         }
         
-        // Do Regular Movement
-        if (_dashCooldown > 0)
-        {
-            _dashCooldown -= Time.fixedDeltaTime;
-            dashCooldownText.text = _dashCooldown.ToString("F0");
-            //dashCooldownImage.fillAmount = 0.4f; Doesn't work
-        } else {
-            dashCooldownOverlay.SetActive(false);
-        }
         
         _rb.MovePosition(transform.position + movement * (speed * Time.fixedDeltaTime));
+        
+        // Invincibility
+        var invinceKey = Input.GetKey(KeyCode.M);
+        if (invinceKey && !isInvincible && _invincibilityCooldown <= 0f)
+        {
+            Debug.Log("Start Invincibility");
+            // Start Invincible
+            isInvincible = true;
+            
+            // Activate Cooldown UI
+            invincibilityCooldownOverlay.SetActive(true);
+            
+            // Initialize Cooldown
+            _invincibilityDuration = invincibilityDuration;
+            _invincibilityCooldown = invincibilityCooldown + invincibilityDuration;
+        }
+        else if (isInvincible)
+        {
+            if (_invincibilityDuration > 0)
+            {
+                _invincibilityDuration -= Time.deltaTime;
+            } else {
+                // End Invincibility
+                isInvincible = false;
+                _invincibilityDuration = invincibilityDuration; 
+            }
+        }
+        
+        if (_invincibilityCooldown > 0)
+        {
+            _invincibilityCooldown -= Time.fixedDeltaTime;
+            invincibilityCooldownText.text = _invincibilityCooldown.ToString("F0");
+        } else {
+            invincibilityCooldownOverlay.SetActive(false);
+        }
+            
         
         // Implement Dash Feature
         var dashKey = Input.GetKey(KeyCode.Y);
@@ -108,6 +152,14 @@ public class PinMovement : MonoBehaviour
             }
         } 
         
+        if (_dashCooldown > 0)
+        {
+            _dashCooldown -= Time.fixedDeltaTime;
+            dashCooldownText.text = _dashCooldown.ToString("F0");
+        } else {
+            dashCooldownOverlay.SetActive(false);
+        }
+        
         if (rotateLeft)
         {
             _rb.angularVelocity = _rb.angularVelocity + rotationVelocity;
@@ -129,5 +181,10 @@ public class PinMovement : MonoBehaviour
     {
         _rb.rotation = 0f;
         _rb.freezeRotation = true;
+    }
+
+    public bool CheckInvincibility()
+    {
+        return isInvincible;
     }
 }
