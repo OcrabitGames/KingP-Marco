@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94d96a65-f299-44cd-9118-8d88de9939dc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/example script/PinBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/example script/PinBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/script/PinMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/PinMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.KingP-Marco/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KingP-Marco/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Background/Space Background" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Background/Space Background.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/script/Scoreboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/Scoreboard.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,6 +23,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/example script/BallBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/example script/PinBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/example script/TimerBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/script/Pin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/script/Pins.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/script/spawn_balls.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal/Shaders/2D/Sprite-Lit-Default.shader" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -118,7 +121,11 @@
       <workItem from="1738790627577" duration="3531000" />
       <workItem from="1739222539159" duration="525000" />
       <workItem from="1739223606131" duration="243000" />
-      <workItem from="1739394313026" duration="435000" />
+      <workItem from="1739394313026" duration="618000" />
+      <workItem from="1739826963944" duration="1000" />
+      <workItem from="1739826972558" duration="3887000" />
+      <workItem from="1740172652528" duration="1753000" />
+      <workItem from="1740677111733" duration="11649000" />
     </task>
     <servers />
   </component>

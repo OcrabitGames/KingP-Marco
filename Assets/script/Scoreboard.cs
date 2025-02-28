@@ -23,7 +23,7 @@ public class Scoreboard : MonoBehaviour
     {
         scoreText = GameObject.Find("Canvas/ScorePanel/ScoreText").GetComponent<TMP_Text>(); 
         clockText = GameObject.Find("Canvas/Time Panel/Timer").GetComponent<TMP_Text>();
-        nearMissText = GameObject.Find("Canvas/NearMiss").GetComponent<TMP_Text>();
+        nearMissText = GameObject.Find("Canvas/NearMissPanel/NearMiss").GetComponent<TMP_Text>();
         
         pinMovementScript = GetComponent<PinMovement>();
         summonerObject = GameObject.Find("summoner");
