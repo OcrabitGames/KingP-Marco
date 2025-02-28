@@ -6,16 +6,56 @@
   <component name="ChangeListManager">
     <list default="true" id="94d96a65-f299-44cd-9118-8d88de9939dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KingP-Marco/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KingP-Marco/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CharacterSelect.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CharacterSelect.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameOverScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameOverScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena1Border.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena1Border.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena2Border.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena2Border.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena3Border.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena3Border.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena4Border.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena4Border.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena5Border.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena5Border.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena6Border.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena6Border.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Arenas/Arena7Border.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Arenas/Arena7Border.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Background/Background1T.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Background/Background1T.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Background/CharacterSelection.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Background/CharacterSelection.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Background/GameOver.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Background/GameOver.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Background/MainMenu.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Background/MainMenu.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Background/SpaceBackground.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Background/SpaceBackground.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Balls/ball-anime.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Balls/ball-anime.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Balls/ball-cat.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Balls/ball-cat.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Balls/ball-colombia.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Balls/ball-colombia.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Balls/ball-ice.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Balls/ball-ice.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Balls/ball-japan.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Balls/ball-japan.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Balls/ball-steak.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Balls/ball-steak.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Balls/ball0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Balls/ball0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Balls/ball2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Balls/ball2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Balls/ball3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Balls/ball3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Balls/ball4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Balls/ball4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Icons/ArrowButtonpng.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Icons/ArrowButtonpng.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Icons/Button2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Icons/Button2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Icons/ButtonIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Icons/ButtonIcon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Icons/DashOff.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Icons/DashOff.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Icons/DiamondButton.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Icons/DiamondButton.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Icons/icon-dash.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Icons/icon-dash.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Icons/icon-invincibility.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Icons/icon-invincibility.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/KingPinLogo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/KingPinLogo.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pins/pin-bill.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Pins/pin-bill.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pins/pin-cardinal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Pins/pin-cardinal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pins/pin-chef.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Pins/pin-chef.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pins/pin-choco.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Pins/pin-choco.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pins/pin-cyber.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Pins/pin-cyber.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pins/pin-dog.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Pins/pin-dog.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pins/pin-frog.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Pins/pin-frog.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/Pins/pin.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Images/Pins/pin.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/pins/dog_pin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/pins/dog_pin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/script/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/CharacterManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/script/MenuScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/MenuScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/script/PinMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/PinMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/script/Scoreboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/Scoreboard.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/script/TargetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/TargetPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/PixelatedEleganceRegular-ovyAA SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/PixelatedEleganceRegular-ovyAA SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +172,7 @@
       <workItem from="1739826963944" duration="1000" />
       <workItem from="1739826972558" duration="3887000" />
       <workItem from="1740172652528" duration="1753000" />
-      <workItem from="1740677111733" duration="15014000" />
+      <workItem from="1740677111733" duration="15866000" />
     </task>
     <servers />
   </component>
