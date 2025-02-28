@@ -7,10 +7,12 @@ public class CharacterManager : MonoBehaviour
     public static int selection = 0;
     public SpriteRenderer spriteRenderer;
     public TMP_Text nameLabel;
+    private AudioSource _buttonSound;
 
     private void Start()
     {
         UpdateCharacter();
+        _buttonSound = GetComponent<AudioSource>();
     }
     
     void UpdateCharacter()
@@ -22,6 +24,8 @@ public class CharacterManager : MonoBehaviour
 
     public void Next()
     {
+        _buttonSound.Play();
+        
         var numberPins = pinsDB.GetCount();
         if (selection < numberPins-1) {
             selection++;
@@ -33,6 +37,8 @@ public class CharacterManager : MonoBehaviour
     
     public void Previous()
     {
+        _buttonSound.Play();
+
         if (selection > 0) {
             selection--;
         } else {
@@ -40,4 +46,5 @@ public class CharacterManager : MonoBehaviour
         }
         UpdateCharacter();
     }
+    
 }

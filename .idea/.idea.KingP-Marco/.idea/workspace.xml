@@ -6,9 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="94d96a65-f299-44cd-9118-8d88de9939dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.KingP-Marco/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KingP-Marco/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Background/Space Background" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/Background/Space Background.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CharacterSelect.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CharacterSelect.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameOverScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameOverScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MenuScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/pins/dog_pin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/pins/dog_pin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/script/CharacterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/CharacterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/script/MenuScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/MenuScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/script/PinMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/PinMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/script/Scoreboard.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/Scoreboard.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/script/TargetPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script/TargetPlayer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +132,7 @@
       <workItem from="1739826963944" duration="1000" />
       <workItem from="1739826972558" duration="3887000" />
       <workItem from="1740172652528" duration="1753000" />
-      <workItem from="1740677111733" duration="11649000" />
+      <workItem from="1740677111733" duration="15014000" />
     </task>
     <servers />
   </component>

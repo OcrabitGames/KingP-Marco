@@ -34,15 +34,18 @@ public class PinMovement : MonoBehaviour
     private Rigidbody2D _rb;
     private Scoreboard _scoreboard;
     private Camera cam;
+    private AudioSource audioSource;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cam = Camera.main;
         
+        audioSource = GetComponents<AudioSource>()[1];
+        
         // Dash
         dashCooldownText = GameObject.Find("Canvas/Dash/DashOff/counter").GetComponent<TextMeshProUGUI>(); 
-        dashCooldownOverlay = GameObject.Find("Canvas/Dash/DashOff"); // Dash
+        dashCooldownOverlay = GameObject.Find("Canvas/Dash/DashOff");
         
         // Invincibility
         invincibilityCooldownText = GameObject.Find("Canvas/Invincibility/InvincibilityOff/counter").GetComponent<TextMeshProUGUI>(); 
@@ -79,20 +82,27 @@ public class PinMovement : MonoBehaviour
         // Vector3 movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
         
         Vector3 mousePosG = cam.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 movement = (new Vector3(mousePosG.x, mousePosG.y, 0) - transform.position).normalized;
-        if (movement.sqrMagnitude < 0.1f)
+        Vector3 movement = (new Vector3(mousePosG.x, mousePosG.y, 0) - transform.position);
+        Debug.Log(movement.sqrMagnitude);
+        if (movement.sqrMagnitude > .3f) 
         {
-            movement = Vector2.zero;
+            movement = movement.normalized; // Normalize movement direction only if moving
+            _rb.MovePosition(transform.position + movement * (speed * Time.fixedDeltaTime));
+        }
+        else
+        {
+            _rb.linearVelocity = Vector2.zero; // Stop residual movement to prevent jitter
         }
         
-        
-        _rb.MovePosition(transform.position + movement * (speed * Time.fixedDeltaTime));
+        if (!isDashing) 
+        {
+            _rb.MovePosition(transform.position + movement * (speed * Time.fixedDeltaTime));
+        }
         
         // Invincibility
-        var invinceKey = Input.GetKey(KeyCode.M);
+        var invinceKey = Input.GetKey(KeyCode.Space);
         if (invinceKey && !isInvincible && _invincibilityCooldown <= 0f)
         {
-            Debug.Log("Start Invincibility");
             // Start Invincible
             isInvincible = true;
             
@@ -107,7 +117,7 @@ public class PinMovement : MonoBehaviour
         {
             if (_invincibilityDuration > 0)
             {
-                _invincibilityDuration -= Time.deltaTime;
+                _invincibilityDuration -= Time.fixedDeltaTime;
             } else {
                 // End Invincibility
                 isInvincible = false;
@@ -125,10 +135,13 @@ public class PinMovement : MonoBehaviour
             
         
         // Implement Dash Feature
-        var dashKey = Input.GetKey(KeyCode.Y);
-        if (dashKey && !isDashing && _dashCooldown <= 0f) {
+        var dashClick = Input.GetMouseButton(0);
+        if (dashClick && !isDashing && _dashCooldown <= 0f) {
             // Start Dash
             isDashing = true;
+            
+            // Play sound
+            audioSource.Play();
             
             // Activate Cooldown UI
             dashCooldownOverlay.SetActive(true);
@@ -140,7 +153,7 @@ public class PinMovement : MonoBehaviour
         }
         if (isDashing) {
             if (_dashDuration > 0) {
-                _dashDuration -= Time.deltaTime;
+                _dashDuration -= Time.fixedDeltaTime;
                 _rb.MovePosition(transform.position + _dashDirection * (dashSpeed * Time.fixedDeltaTime));
             } else { 
                 // End Dash

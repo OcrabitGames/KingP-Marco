@@ -17,10 +17,13 @@ public class Scoreboard : MonoBehaviour
     private GameObject summonerObject;
     private PinMovement pinMovementScript;
     private spawn_balls spawnBallScript;
+    private AudioSource audioSource;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource = GetComponents<AudioSource>()[0];
+            
         scoreText = GameObject.Find("Canvas/ScorePanel/ScoreText").GetComponent<TMP_Text>(); 
         clockText = GameObject.Find("Canvas/Time Panel/Timer").GetComponent<TMP_Text>();
         nearMissText = GameObject.Find("Canvas/NearMissPanel/NearMiss").GetComponent<TMP_Text>();
@@ -85,5 +88,10 @@ public class Scoreboard : MonoBehaviour
         
         // Reset Game Objects
         spawnBallScript.ResetGame();
+    }
+
+    public void PlayCollisionSound()
+    {
+        audioSource.Play();
     }
 }

@@ -1,11 +1,19 @@
+using System.Collections;
 using UnityEngine;
 
 public class MenuScript : MonoBehaviour
 {
     public void goToGame()
     {
-        AudioSource source = GetComponent<AudioSource>();
-        source.Play();
+        StartCoroutine(WaitForSoundAndTransition("MainGame"));
+    }
+    
+    // Sorry for the comment below \/ The ide got mad
+    // ReSharper disable Unity.PerformanceAnalysis
+    private IEnumerator WaitForSoundAndTransition(string sceneName){
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
+        yield return new WaitForSeconds(audioSource.clip.length);
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainGame");
     }
     

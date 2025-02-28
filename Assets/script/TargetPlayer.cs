@@ -127,6 +127,7 @@ public class TargetPlayer : MonoBehaviour
         {
             if (!_pinMovementScript.CheckInvincibility())
             {
+                _scoreboardScript.PlayCollisionSound();
                 _scoreboardScript.EndGame();
             }
         }
